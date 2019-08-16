@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/Desktop/Amos/twitch-plays-teleop/tp-teleop_ws/install
+
+Name: rrbot_description
+Description: Description of rrbot_description
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ubuntu/Desktop/Amos/twitch-plays-teleop/tp-teleop_ws/install/lib 
+Requires: 

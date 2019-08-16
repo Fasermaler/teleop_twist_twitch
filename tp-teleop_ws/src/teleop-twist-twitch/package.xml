@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <name>teleop_twist_twitch</name>
+  <version>0.1.0</version>
+  <description>Twitch plays Teleop Twist!</description>
+
+  <maintainer email="fasermaler@protonmail.com">Fasermaler</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">github.com/fasermaler</url>
+
+  <author>Fasermaler</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>rospy</run_depend>
+</package>

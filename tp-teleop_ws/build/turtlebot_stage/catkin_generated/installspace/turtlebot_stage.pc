@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/Desktop/Amos/twitch-plays-teleop/tp-teleop_ws/install
+
+Name: turtlebot_stage
+Description: Description of turtlebot_stage
+Version: 2.2.3
+Cflags: 
+Libs: -L/home/ubuntu/Desktop/Amos/twitch-plays-teleop/tp-teleop_ws/install/lib 
+Requires: 
