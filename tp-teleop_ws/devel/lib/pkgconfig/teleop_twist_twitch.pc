@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/Desktop/Amos/twitch-plays-teleop/tp-teleop_ws/devel
-
-Name: teleop_twist_twitch
-Description: Description of teleop_twist_twitch
-Version: 0.1.0
-Cflags: 
-Libs: -L/home/ubuntu/Desktop/Amos/twitch-plays-teleop/tp-teleop_ws/devel/lib 
-Requires: 

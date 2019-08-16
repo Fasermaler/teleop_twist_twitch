@@ -1,2 +1,0 @@
-rover_description:rover_gazebo:teleop-twist-twitch
--DCATKIN_DEVEL_PREFIX=/home/ubuntu/Desktop/Amos/twitch-plays-teleop/tp-teleop_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/Desktop/Amos/twitch-plays-teleop/tp-teleop_ws/install -G Unix Makefiles

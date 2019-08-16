@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/Desktop/Amos/twitch-plays-teleop/tp-teleop_ws/install
-
-Name: turtlebot_stdr
-Description: Description of turtlebot_stdr
-Version: 2.2.3
-Cflags: 
-Libs: -L/home/ubuntu/Desktop/Amos/twitch-plays-teleop/tp-teleop_ws/install/lib 
-Requires: 
