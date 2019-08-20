@@ -104,10 +104,10 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
 
 def main():
 
-    username  = "twitch-plays-teleop-bot"
-    client_id = "hnisz359piwaj7htdcup5j32lhdhgz"
-    token     = "vpw61tcfczvwaytdr6xiwetdf1yvhy"
-    channel   = "fasermaler"
+    username  = 
+    client_id = 
+    token     = 
+    channel   = 
 
     bot = TwitchBot(username, client_id, token, channel)
     bot.start()
