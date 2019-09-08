@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 from __future__ import print_function
 
 import roslib; roslib.load_manifest('teleop_twist_keyboard')
@@ -13,13 +12,13 @@ import sys, select, termios, tty
 import irc.bot
 import requests
 
-
+# Details to be defined by user
 username  = 
 client_id = 
 token     = 
 channel   = 
 
-
+# Message when starting the package!
 msg = """
 Reading from Twitch and Publishing to Twist!
 ---------------------------
@@ -33,13 +32,10 @@ Moving around:
 CTRL-C to quit
 """
 
-
-
 def vels(speed,turn):
     return "currently:\tspeed %s\tturn %s " % (speed,turn)
+
 def publish_teleop(x, y, z, th):
-
-
     twist = Twist()
     twist.linear.x = x*speed; twist.linear.y = y*speed; twist.linear.z = z*speed;
     twist.angular.x = 0; twist.angular.y = 0; twist.angular.z = th*turn
@@ -66,14 +62,14 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
 
     def on_welcome(self, c, e):
         print('Joining ' + self.channel)
-
-        # You must request specific capabilities before you can use them
+        
+        # Request specific capabilities before you can use them
         c.cap('REQ', ':twitch.tv/membership')
         c.cap('REQ', ':twitch.tv/tags')
         c.cap('REQ', ':twitch.tv/commands')
         c.join(self.channel)
 
-
+    # Publishes the twist message when respective commands have been entered in chat
     def on_pubmsg(self, c, e):
         chat_input = e.arguments[0]
         # If a chat message starts with an exclamation point, try to run it as a command
@@ -81,7 +77,6 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
             print('Bot going up!')
             publish_teleop(1, 0, 0, 0)
             
-
         elif 'down' in chat_input.lower():
             print('Bot going down!')
             publish_teleop(-1, 0, 0, 0)
@@ -102,7 +97,7 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
         elif 'help' in chat_input.lower():
             self.print_help(c)
 
-
+    # Prints out the legend to help new users who joined the chat
     def print_help(self, c):
         url = 'https://api.twitch.tv/kraken/channels/' + self.channel_id
         headers = {'Client-ID': self.client_id, 'Accept': 'application/vnd.twitchtv.v5+json'}
@@ -116,8 +111,6 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
         c.privmsg(self.channel, 'stop - bot stops')
 
     
-
-
 def main():
     print(msg)
     print(vels(speed,turn))
